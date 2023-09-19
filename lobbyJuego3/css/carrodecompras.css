@@ -1,0 +1,323 @@
+* {
+    box-sizing: border-box;
+    font-family: "MedievalSharp", cursive, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    max-height: 100vh;
+    max-width: 100vw;
+}
+
+html{
+    height: 100vh;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+
+a:link, a:visited {
+    text-decoration: none;
+  }
+
+.navbar a{
+    font-style: italic;
+    text-decoration: none;
+    color: #FBBF00;
+    font-style: oblique;
+    text-decoration-color: transparent;
+}
+
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    max-height: 100vh;
+    max-width: 100vw;
+    background-image: url("../img/vitrinaWallpaper.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-rows: 10vh 90vh;
+    grid-template-columns: 6fr 2.5fr 1.2fr 0.3fr;
+    grid-template-areas:
+        ". e-commerce navbar"
+        "jugadores crearPartida navbar";
+}
+
+.barrabusqueda{
+    grid-area:barraBusqueda ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50%;
+}
+
+.barrabusqueda input{
+    background-color: #08244E;
+    padding: 2%;
+    border: 3px solid #FBBF00;
+    color: #FBBF00;
+    width: 80%;
+}
+
+.paginador {
+    grid-area: paginador;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5%;
+    gap:3%;
+    padding-left: 10%;
+}
+
+.pagina{
+    background-color: #08244E;
+    border: 2px solid #FBBF00 ;
+    width: 5vh;
+    height:5vh;
+    transform: rotate(45deg);
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.pagina h3{
+    transform: rotate(-45deg);
+    color: white;
+}
+
+.pagina:hover{
+    background-color: #FBBF00;
+    border: 2px solid #08244E ;
+    width: 5vh;
+    height:5vh;
+    transform: rotate(45deg);
+    flex-shrink: 0;
+}
+.e-commerce {
+    grid-area: e-commerce;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:3%;
+}
+
+.e-commerce img{
+height: 5vh;
+width: auto;
+}
+.monedas {
+    background-color: #ce9e4a;
+    border: #FBBF00 solid 0.2rem;
+    color: white;
+    height: 3vh;
+    width: 10vw;
+    text-align: center;
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.monedas img {
+    height: 5.5vh;
+    width: auto;
+    margin-left: 20%;
+}
+
+.navbar {
+    grid-area: navbar;
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.bandera{
+    padding: 3%;
+    background-color: #08244E;
+    border: 5px solid #FBBF00;
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 75vh;
+    gap: 4%;
+    text-align: center;
+}
+
+.navbar img {
+    cursor: pointer;
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navbar a {
+    font-style: italic;
+    text-decoration: none;
+    text-decoration-color: transparent;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.jugar{
+    height: 25vh;
+}
+
+
+.jugar img{
+    width: 100%;
+    height: auto;
+}
+
+.col1{
+    grid-area: jugadores;
+    margin: 5%;
+    padding: 5%;
+    background-color: #ce9e4a;
+    color: white;
+    border:#D4D4D4 0.2rem solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url("../img/woodTexture.png");
+    opacity: 0.95;
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+.col1 h1 {
+    margin-bottom: 2%;
+    color: #ce9e4a;
+}
+.col1 h2 {
+    margin-bottom: 3%;
+    color: #ce9e4a;
+}
+.col1 p {
+    margin-bottom: 3%;
+    font-size: 0.9rem;
+}
+.producto{
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 3%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 0.8rem;
+    border: #D4D4D4 0.1rem solid;
+    background-image: url("../img/woodTexture.png");
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.col2 {
+    grid-area: crearPartida;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 5%;
+}
+
+.precio {
+    height: 20%;
+    width: 90%;
+    background-image: url("../img/woodTexture.png");
+    border: #D4D4D4 0.2rem solid;
+    padding-top: 8%;
+    color:white;
+}
+.precio h1{
+    color: #ce9e4a;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.precio p{
+    text-align: center;
+    font-size: 1.2rem;
+}
+.botones{
+    padding-bottom: 100%;
+    padding-right: 20%;
+}
+.btn2 {
+    background-color: #D4D4D4;
+    color: black;
+    border: 0.1rem solid black;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-align: center;
+    display: block; /* Cambia a display: block */
+    width: 150%;
+    height: 90%;
+}
+.botones button{
+    align-items: center;
+}
+
+.btn2:hover {
+    background-color: #FBBF00;
+    color: #08244E;
+    border: 1px solid #D4D4D4;
+}
+.btn2:first-child {
+    margin-bottom: 10px; /* Ajusta el valor según el espacio deseado */
+}
+.imagenc{
+height:auto;
+width: 15%;
+}	
+
+.imagenc img {
+    max-width: 100%;
+    height: auto;
+    border-image: 50%;
+    border-radius: 25px; 
+}
+.quitar{
+    padding: 3%;
+    color: #F4FFF2;
+    background-color: #565454;
+}
+.num{
+    width: 10%;
+    padding: 3%;
+    color: #F4FFF2;
+    background-color: #000000;
+}
+.agregar{
+    padding: 3%;
+    color: #F4FFF2;
+    background-color: #19a700;
+
+}
+.cerrar{
+    padding: 3%;
+    color: #F4FFF2;
+    background-color: #f41804;
+}
+
+.info{
+    width: 100%;
+}
+
+
+
